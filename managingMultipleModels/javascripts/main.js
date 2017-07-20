@@ -1,4 +1,4 @@
-let template = Handlebars.compile($('#items').remove().html());
+ilet template = Handlebars.compile($('#items').remove().html());
 Handlebars.registerPartial('item', $('#item').remove().html());
 
 let Collection = {
