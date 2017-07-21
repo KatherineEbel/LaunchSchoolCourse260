@@ -16,4 +16,7 @@ templates['listItem'] = template({"1":function(container,depth0,helpers,partials
     + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.colors : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "</ul>\n";
 },"useData":true});
+templates['new'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div id=\"modal\">\n  <form action=\"#\" method=\"POST\">\n    <fieldset>\n      <label for=\"name\">Name:</label>\n      <input type=\"text\" id =\"name\", name=\"name\">\n      <label for=\"color1\">#1 Color:</label>\n      <input type=\"text\" id=\"color1\" name=\"color1\">\n      <label for=\"color2\">#2 Color:</label>\n      <input type=\"text\" id=\"color2\" name=\"color2\">\n      <label for=\"color3\">#3 Color:</label>\n      <input type=\"text\" id=\"color3\" name=\"color3\">\n    </fieldset>\n    <fieldset>\n      <button class=\"btn add\" type=\"submit\">Add</button>\n      <button class=\"btn cancel\">Cancel</button>\n    </fieldset>\n  </form>\n</div>\n";
+},"useData":true});
 })();
