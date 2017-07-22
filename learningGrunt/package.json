@@ -1,0 +1,16 @@
+{
+  "name": "learninggrunt",
+  "version": "1.0.0",
+  "description": "playing with grunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Katherine Ebel",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-bower-concat": "^1.0.0",
+    "grunt-contrib-uglify": "^3.0.1"
+  }
+}
