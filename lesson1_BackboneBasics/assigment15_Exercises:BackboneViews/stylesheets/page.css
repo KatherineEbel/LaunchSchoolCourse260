@@ -1,0 +1,72 @@
+body {
+  position: relative;
+  font-size: 1em;
+}
+
+#modal {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#modal form {
+ position: absolute;
+ top: 15%;
+ left: 15%;
+ width: 500px;
+ height: 360px;
+ padding: 8px;
+ background: white;
+ border-radius: 8px;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset + fieldset {
+  text-align: center;
+}
+
+label, input {
+  float: left;
+}
+
+input, .btn {
+  border-radius: 8px;
+}
+
+label {
+  width: 14%;
+  padding-top: 23px;
+}
+input {
+  padding: 10px;
+  height: 30px;
+  width: 75%;
+  margin: 8px;
+  border: 1px solid #cecece;
+}
+
+.btn {
+  margin: 8px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+
+.btn.add {
+  background: #18d89b;
+}
+
+.btn.cancel {
+  background: #e33e45;
+}
