@@ -1,0 +1,17 @@
+{
+  "name": "music-collection-application",
+  "version": "1.0.0",
+  "description": "Music collection application",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "jasmine-node spec/ --autotest --color --watch ."
+  },
+  "author": "Katherine Ebel",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine-node": "^1.14.5",
+    "node-static": "^0.7.9",
+    "request": "^2.81.0"
+  }
+}
