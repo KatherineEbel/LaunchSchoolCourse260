@@ -49,6 +49,55 @@ h3 {
   color: inherit;
 }
 
+#tracks_modal {
+  display: none;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  bottom: 25px;
+  left: 25px;
+  padding: 25px;
+  z-index: 10;
+  background: #F5F6D4;
+}
+
+#tracks_modal > a.close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 1;
+  color: #A7C520;
+}
+
+#tracks_modal img {
+  float: left;
+  width: 80px;
+  margin: 0 10px 10px 0;
+}
+
+#tracks_modal h2 {
+  padding: 0 0 10px 0;
+}
+
+#tracks_modal h3 {
+  padding: 0 0 5px 0;
+}
+
+#tracks_modal ol {
+  clear: both;
+  list-style: decimal inside;
+}
+
+#tracks_modal li {
+  padding: 7px 0;
+  border-top: 1px solid #A7C520;
+}
+
+#tracks_modal li small {
+  float: right;
+}
+
+
 #overlay {
   display: none;
   position: fixed;

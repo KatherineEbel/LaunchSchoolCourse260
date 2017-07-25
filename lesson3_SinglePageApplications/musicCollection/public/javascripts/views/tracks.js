@@ -1,6 +1,12 @@
 let $overlay = $('#overlay');
 
 let TracksView = Backbone.View.extend({
+  attributes: {
+    id: 'tracks_modal'
+  },
+  events: {
+    'click a.close': 'close'
+  },
   duration: 300,
   template: Handlebars.compile($("[data-name=tracks]").remove().html()),
   open() {
