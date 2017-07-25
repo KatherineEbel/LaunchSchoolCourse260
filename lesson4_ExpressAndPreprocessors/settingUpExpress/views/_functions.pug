@@ -1,0 +1,11 @@
+-
+  let total = (a, b) => {
+    return (a.price ? a.price * a.quantity : a) + b.price *
+    b.quantity;
+  }
+
+  let format = (price) => price.toFixed(2);
+
+  let cartQuantity = () => cart.reduce((total, item) => {
+    return total + item.quantity;
+  },0)

@@ -1,8 +1,12 @@
+include /_mixins
+include /_cartMock
+include /_functions
+
 doctype html
 html
   head
     title Web Store
-    link(rel='stylesheet', href='/stylesheets/application.css')
+    +stylesheetLinkTag('application.css')
     link(href="http://fonts.googleapis.com/css?family=Fjalla+One"
     rel="stylesheet" type="text/css")
   body
@@ -11,13 +15,17 @@ html
       #cart
         h3
           // leave span inline so whitespace preserved
-          a(href="#") Cart<span>4</span> 
+          a(href="#") 
+            | Cart
+            span= cartQuantity()
         #items
           ul
             li ActRaiser x 1<span>$50.00</span>
             li Metroid Prime x 2<span>$21.00</span>
             li Silent Hill 3 x 1<span>$25.00</span>
-            li <strong>Total</strong><span>$96.00</span>
+            li 
+              strong Total
+                span $#{format(cart.reduce(total))}
           a(href="#") Checkout
       block content
-    script(type="text/javascript" src="javascripts/cart.js")
+    +javascriptIncludeTag('cart.js')
