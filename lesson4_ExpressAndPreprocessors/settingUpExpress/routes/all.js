@@ -4,7 +4,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   let navLocals = {
-    title: 'Home',
+    title: 'Web Store',
     links: [
       {title: 'Home', href: '/', active: true},
       {title: 'Contact', href: '/'},
@@ -12,8 +12,7 @@ router.get('/', function(req, res, next) {
     ]
   }
 
-  res.sendFile(`${__dirname.replace(/routes/, 'views')}/index.html`);
-  // res.render('index', navLocals);
+  res.render('index', {title: 'Web Store'});
 });
 
 module.exports = router;
