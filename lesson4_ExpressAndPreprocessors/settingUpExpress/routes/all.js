@@ -11,7 +11,9 @@ router.get('/', function(req, res, next) {
       {title: 'About', href: '/'},
     ]
   }
-  res.render('index', navLocals);
+
+  res.sendFile(`${__dirname.replace(/routes/, 'views')}/index.html`);
+  // res.render('index', navLocals);
 });
 
 module.exports = router;
