@@ -12,7 +12,7 @@
   <script src="javascripts/lib/jasmine-2.6.4/boot.js"></script>
   <script src="/javascripts/vendor/all.js"></script>
   <style>
-    #albums { display: none } 
+    #albums, #tracks_modal { display: none }
   </style>
 </head>
 
@@ -31,13 +31,35 @@
       </li>
     {{/each}}
   </script>
+
+  <script data-name="tracks" type="text/x-handlebars">
+    {{#with album}}
+      <a class="close" href="#">Close</a>
+      <img src="{{cover}}" alt="">
+      <h2>{{title}}</h2>
+      <h3>{{artist}}</h3>
+      <p>Release: {{date}}</p>
+    {{/with}}
+      <ol>
+        {{#each tracks}}
+          <li>{{title}} <small>{{length}}</small></li>
+        {{/each}}
+      </ol>
+  </script>
   <script src="/javascripts/models/album.js"></script>
+  <script src="/javascripts/models/track.js"></script>
   <script src="/javascripts/collections/albums.js"></script>
+  <script src="/javascripts/collections/tracks.js"></script>
   <script src="/javascripts/views/albums.js"></script>
+  <script src="/javascripts/views/tracks.js"></script>
   <script src="/javascripts/app.js"></script>
+  <script src="javascripts/scaffolding/albums.js"></script>
+  <script src="javascripts/scaffolding/tracks.js"></script>
 
   <!-- include spec files here... -->
   <script src="javascripts/spec/albumsSpec.js"></script>
   <script src="javascripts/spec/albumsViewSpec.js"></script>
+  <script src="javascripts/spec/trackSpec.js"></script>
+  <script src="javascripts/spec/tracksViewSpec.js"></script>
 </body>
 </html>
