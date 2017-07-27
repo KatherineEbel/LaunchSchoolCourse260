@@ -7,8 +7,7 @@ const bodyParser = require('body-parser');
 const stylus = require('stylus');
 const nib = require('nib');
 
-const index = require('./routes/index');
-const albums = require('./routes/albums');
+const routes = require('./routes/all');
 
 const app = express();
 
@@ -29,8 +28,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/', albums);
+app.use('/', routes);
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
