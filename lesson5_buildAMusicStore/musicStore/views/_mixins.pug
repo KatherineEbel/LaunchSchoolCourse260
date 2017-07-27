@@ -1,0 +1,8 @@
+mixin stylesheetLinkTag(src)
+  link(rel='stylesheet' href=`/stylesheets/${src}.css`)
+
+mixin javascriptIncludeTag(src, ...rest)
+  script(type="text/javascript" href=`/javascripts/${src}.js`)
+  each file in rest
+    script(type="text/javascript" href=`/javascripts/${file}.js`)
+
