@@ -8,7 +8,10 @@ const getAlbums = () => JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { albums: getAlbums() });
+  res.render('index', {
+    title: 'Music Store',
+    albums: getAlbums()
+  });
 });
 
 module.exports = router;
