@@ -1,0 +1,18 @@
+{
+  "name": "musicstore",
+  "description": "",
+  "main": "",
+  "authors": [
+    "KatherineEbel <kathyebel@me.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/KatherineEbel/LaunchSchoolCourse260",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
