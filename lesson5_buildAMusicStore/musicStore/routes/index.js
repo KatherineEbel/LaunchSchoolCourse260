@@ -10,7 +10,7 @@ module.exports = (router) => {
   router.get('/', (req, res, next) => {
     res.render('index', {
       title: 'Music Store',
-      albums: Albums().get()
+      albums: Albums.get()
     });
   });
 

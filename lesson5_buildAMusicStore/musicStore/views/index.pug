@@ -11,3 +11,7 @@ block content
         p= album.date
         p $#{album.price}
         a.button(href="#") Add to Cart
+
+block scripts
+  script(type='text/javascript').
+    App.albums = new Albums(!{JSON.stringify(albums)});

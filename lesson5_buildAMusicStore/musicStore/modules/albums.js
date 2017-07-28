@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const filePath = path.resolve(path.dirname(__dirname), 'data/albums.json');
 
-module.exports = () => {
+const Albums = (() => {
   const readFile = () => JSON.parse(fs.readFileSync(filePath, 'utf8'));
   return {
     getLastID() {
@@ -19,4 +19,7 @@ module.exports = () => {
       }), 'utf8');
    }
   };
-};
+})();
+
+module.exports = Albums;
+
