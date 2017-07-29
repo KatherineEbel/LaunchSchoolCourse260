@@ -16,4 +16,7 @@ html
     +javascriptIncludeTag('models/album')
     +javascriptIncludeTag('collections/albums')
     +javascriptIncludeTag('views/album', 'views/newAlbum', 'views/index')
+    script(type='text/javascript').
+      App.albums = new Albums(!{JSON.stringify(albums)});
+    +javascriptIncludeTag('router')
     block scripts

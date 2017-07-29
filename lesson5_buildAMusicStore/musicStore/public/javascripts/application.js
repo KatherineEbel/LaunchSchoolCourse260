@@ -2,8 +2,9 @@ let App = {
   templates: JST,
   $el: $('main'),
   indexView() {
-    this.indexView = new IndexView();
+    this.index = new IndexView();
     this.renderAlbums();
+    this.bindEvents();
   },
   newAlbum() {
     new NewAlbumView();
@@ -18,11 +19,7 @@ let App = {
   },
   bindEvents() {
     _.extend(this, Backbone.Events);
-    this.listenTo(this.indexView, 'addAlbum', this.newAlbum);
-  },
-  init() {
-    this.indexView();
-    this.bindEvents();
+    this.listenTo(this.index, 'addAlbum', this.newAlbum);
   }
 };
 
