@@ -11,26 +11,13 @@ html
   body
     header
       #cart
-        label(for="cartToggle") 2 items
-        input#cartToggle(type='checkbox')
-        #items
-          ul
-            li
-              a(href="#") Remove
-              Album Name x 1
-              small $19.00
-            li
-              a(href="#") Remove
-              Really long Album name x 2
-              small $10.99
-          p $50.00
     main
       block content
 
     +javascriptIncludeTag('application')
     +javascriptIncludeTag('models/album')
-    +javascriptIncludeTag('collections/albums')
-    +javascriptIncludeTag('views/album', 'views/newAlbum', 'views/index')
+    +javascriptIncludeTag('collections/albums', 'collections/cartItems')
+    +javascriptIncludeTag('views/album', 'views/newAlbum', 'views/index', 'views/cart')
     script(type='text/javascript').
       App.albums = new Albums(!{JSON.stringify(albums)});
     +javascriptIncludeTag('router')

@@ -14,7 +14,7 @@ Backbone.history.start({
   pushState: true
 });
 
-$(document).on('click', 'a[href^='/']', e => {
+$(document).on('click', 'a[href^="/"]', e => {
   e.preventDefault();
   router.navigate($(e.target).attr('href').replace(/^\//, ''), { trigger: true });
 });
