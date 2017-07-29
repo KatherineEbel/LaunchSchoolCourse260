@@ -33,6 +33,7 @@ main
   padding: 25px 40px
   margin: 0 auto
   background: colors.main
+  clear: both
 
 #index
   ul
@@ -57,3 +58,70 @@ main
 
 a.button, input[type=submit]
   button()
+
+header
+  width: 800px
+  padding: 0 40px
+  margin: 0 auto
+
+#cart
+  position: relative
+  float: right
+  width: 50%
+  padding: 15px 0 0 0
+  text-align: right
+  label
+    display: inline-block
+    padding: 2px 3px
+    cursor: pointer
+  input
+    display: none
+    &:checked
+      + #items
+        display: block
+  #items
+    display: none
+    position: absolute
+    top: 100%
+    right: 0
+    z-index: 1
+    padding: 5px 10px
+    color: colors.button.text
+    background: colors.button.bg
+    ul
+      list-style: none
+      padding-left: 0
+    li
+      padding: 5px 0
+      text-align: left
+      font-size: 12px
+    small
+      float: right
+      margin: 0 0 0 10px
+      font-size: 12px
+    a
+      float: left
+      position: relative
+      width: 12px
+      height: 12px
+      margin: 0 5px 0 0
+      overflow: hidden
+      text-indent: 8685px
+      transform: rotate(45deg)
+      &:before,
+      &:after
+        position: absolute
+        content: ''
+        background: colors.delete
+      &:before
+        top: 0
+        bottom: 0
+        left: 50%
+        margin-left: -1px
+        width: 2px
+      &:after
+        top: 50%
+        right: 0
+        left: 0
+        height: 2px
+        margin-top: -1px
