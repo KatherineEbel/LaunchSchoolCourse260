@@ -11,6 +11,14 @@ const CartItems = Backbone.Collection.extend({
   getQuantity() {
     return this.quantity;
   },
+  readStorage() {
+    let storedCart = JSON.parse(localStorage.getItem('cart'));
+    this.reset(storedCart);
+    this.setTotal().setQuantity();
+  },
+  updateStorage() {
+    localStorage.setItem('cart', JSON.stringify(this.toJSON()));
+  },
   setQuantity() {
     this.quantity = this.toJSON().reduce((count, nextVal) => {
       return count + nextVal.quantity
@@ -27,14 +35,18 @@ const CartItems = Backbone.Collection.extend({
       this.add(existing);
     }
   this.setTotal();
-    this.setTotal().setQuantity();
+    this.update()
     this.trigger('cartUpdated');
   },
   destroy(id) {
     this.remove(id);
-    this.setTotal().setQuantity();
+    this.update();
+  },
+  update() {
+    this.setTotal().setQuantity().updateStorage();
   },
   initialize() {
+    this.readStorage();
     this.on('destroy', this.destroy);
   }
 });
